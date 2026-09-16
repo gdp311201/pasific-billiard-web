@@ -6,14 +6,14 @@ export default function Footer() {
           <h3 className="text-lg font-bold text-[#D4AF37] mb-4 tracking-wider">PASIFIC BILLIARD</h3>
           <p className="text-gray-400 text-sm mb-4">Tempat billiard premium dengan standar internasional dan suasana elegan.</p>
           <a href="https://www.instagram.com/pasific.billiard" target="_blank" className="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm inline-flex items-center gap-2">
-            📸 @pasific.billiard
+            <img src="https://i.ibb.co/W4h5yHRL/ame-1.png" alt="Ig Pasific" className="h-5 w-auto" /> @pasific.billiard
           </a>
         </div>
         <div>
           <h3 className="text-lg font-bold text-white mb-4 tracking-wider">TITIK BALIK CAFE</h3>
           <p className="text-gray-400 text-sm mb-4">Menu makanan & minuman pilihan untuk menemani santai Anda.</p>
           <a href="https://www.instagram.com/titikbalik_kembali" target="_blank" className="text-gray-300 hover:text-[#D4AF37] transition-colors text-sm inline-flex items-center gap-2">
-            📸 @titikbalik_kembali
+            <img src="https://i.ibb.co/W4h5yHRL/ame-1.png" alt="Ig Titik Balik" className="h-5 w-auto" /> @titikbalik_kembali
           </a>
         </div>
         <div>
