@@ -8,17 +8,22 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:p-6">
-        {/* Logo Kiri */}
-        <Link href="/" className="flex items-center gap-3">
-          <img src="https://i.ibb.co/r288NqZc/ame-4.png" alt="Pasific" className="h-10 md:h-12 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
-          <span className="text-gray-600 text-xl">x</span>
-          <img src="https://i.ibb.co/cSHykD32/ame-3.png" alt="Titik Balik" className="h-10 md:h-12 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
+        
+        {/* Typography Logo (Kiri) */}
+        <Link href="/" className="flex items-center gap-2">
+          <span className="text-sm md:text-lg font-extrabold tracking-[0.15em] text-[#D4AF37] drop-shadow-[0_0_5px_rgba(212,175,55,0.3)]">
+            PASIFIC BILLIARD
+          </span>
+          <span className="text-gray-600 hidden sm:inline">|</span>
+          <span className="text-sm md:text-lg font-extrabold tracking-[0.15em] text-white hidden sm:inline">
+            TITIK BALIK
+          </span>
         </Link>
 
         {/* Menu Desktop (Tengah) */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-          <Link href="/billiard" className="hover:text-[#D4AF37] transition-colors">Pasific Billiard</Link>
-          <Link href="/cafe" className="hover:text-[#D4AF37] transition-colors">Titik Balik Cafe</Link>
+          <Link href="/billiard" className="hover:text-[#D4AF37] transition-colors">Billiard</Link>
+          <Link href="/cafe" className="hover:text-[#D4AF37] transition-colors">Cafe</Link>
           <Link href="/promo" className="hover:text-[#D4AF37] transition-colors">Promo</Link>
           <Link href="/faq" className="hover:text-[#D4AF37] transition-colors">FAQ</Link>
         </div>
@@ -29,16 +34,15 @@ export default function Navbar() {
             Booking Meja
           </Link>
 
-          {/* Burger Button Mobile */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white text-3xl focus:outline-none">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[#D4AF37] text-3xl focus:outline-none">
             {isOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
 
-      {/* Menu Mobile (Muncul kalau burger diklik) */}
+      {/* Menu Mobile */}
       {isOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-xl border-t border-white/10 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 px-6 py-4 flex flex-col gap-4">
           <Link href="/billiard" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-[#D4AF37] py-2 border-b border-white/5">Pasific Billiard</Link>
           <Link href="/cafe" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-[#D4AF37] py-2 border-b border-white/5">Titik Balik Cafe</Link>
           <Link href="/promo" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-[#D4AF37] py-2 border-b border-white/5">Promo</Link>
