@@ -9,18 +9,17 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:p-6">
         
-        {/* Typography Logo (Kiri) */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-sm md:text-lg font-extrabold tracking-[0.15em] text-[#D4AF37] drop-shadow-[0_0_5px_rgba(212,175,55,0.3)]">
+        {/* Typography Logo 2 Baris */}
+        <Link href="/" className="flex flex-col leading-tight">
+          <span className="text-[10px] sm:text-sm md:text-lg font-extrabold tracking-[0.15em] text-[#D4AF37] drop-shadow-[0_0_5px_rgba(212,175,55,0.3)]">
             PASIFIC BILLIARD
           </span>
-          <span className="text-gray-600 hidden sm:inline">|</span>
-          <span className="text-sm md:text-lg font-extrabold tracking-[0.15em] text-white hidden sm:inline">
-            TITIK BALIK
+          <span className="text-[10px] sm:text-sm md:text-lg font-extrabold tracking-[0.15em] text-white">
+            TITIK BALIK CAFE
           </span>
         </Link>
 
-        {/* Menu Desktop (Tengah) */}
+        {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
           <Link href="/billiard" className="hover:text-[#D4AF37] transition-colors">Billiard</Link>
           <Link href="/cafe" className="hover:text-[#D4AF37] transition-colors">Cafe</Link>
@@ -28,19 +27,18 @@ export default function Navbar() {
           <Link href="/faq" className="hover:text-[#D4AF37] transition-colors">FAQ</Link>
         </div>
 
-        {/* Tombol Booking & Burger (Kanan) */}
+        {/* Tombol Kanan */}
         <div className="flex items-center gap-4">
           <Link href="/billiard" className="hidden md:block bg-gradient-to-r from-[#D4AF37] to-[#F5C518] text-black font-bold py-2 px-6 rounded-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.5)] transition-all text-sm">
             Booking Meja
           </Link>
-
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[#D4AF37] text-3xl focus:outline-none">
             {isOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
 
-      {/* Menu Mobile */}
+      {/* Menu Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 px-6 py-4 flex flex-col gap-4">
           <Link href="/billiard" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-[#D4AF37] py-2 border-b border-white/5">Pasific Billiard</Link>
