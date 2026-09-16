@@ -35,11 +35,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Overlay Mobile */}
+      {/* Overlay Mobile - SOLID HITAM */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setIsOpen(false)}></div>
-          <div className="absolute top-0 right-0 w-3/4 h-full bg-black/95 border-l border-[#D4AF37]/30 p-6 flex flex-col gap-6 shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
+        <div className="md:hidden fixed inset-0 z-[100]">
+          {/* Background Hitam Pekat (Tanpa Transparan) */}
+          <div className="absolute inset-0 bg-black" onClick={() => setIsOpen(false)}></div>
+          
+          {/* Kotak Menu Kanan (Solid Hitam) */}
+          <div className="absolute top-0 right-0 w-3/4 h-full bg-black border-l-2 border-[#D4AF37]/30 p-6 flex flex-col gap-6 shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
             <div className="flex justify-end">
               <button onClick={() => setIsOpen(false)} className="text-[#D4AF37] text-3xl">✕</button>
             </div>
